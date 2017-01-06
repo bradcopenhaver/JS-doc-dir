@@ -1,0 +1,16 @@
+#result-doctors {
+  display: flex;
+  flex-wrap: wrap;
+  .listing {
+    height: 250px;
+    width: 250px;
+    border: solid black 1px;
+    h4 {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

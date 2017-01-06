@@ -1,13 +1,13 @@
 var apiKey = require("./../.env").apiKey;
 
 function LookupDr() {
-  var ailment;
+  var keyword;
   var searchResults;
 }
 
-LookupDr.prototype.search = function (ailment, displayFunction) {
-  this.ailment = ailment;
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ ailment+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey)
+LookupDr.prototype.search = function (keyword, radius, location, displayFunction) {
+  this.keyword = keyword;
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ keyword+'&location=' + location + '%2C%20' + radius + '&skip=0&limit=20&user_key=' + apiKey)
    .then(function(result) {
       console.log(result);
       this.searchResults=result;

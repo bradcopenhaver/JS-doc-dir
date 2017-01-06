@@ -16,16 +16,36 @@
       <h1>Find a Doctor</h1>
       <form id="find-dr" action="index.html" method="post">
         <div class="form-group">
-          <label for="ailment">What ails you, my friend?</label>
-          <input type="text" name="ailment" id="ailment">
+          <div id="ailment-input">
+            <label for="ailment">What ails you?</label>
+            <input type="text" name="ailment" id="ailment">
+          </div>
+        </div>
+        <p id="show-keyword">Or click here to search by keyword.</p>
+        <div class="form-group">
+          <div id="keyword-input">
+            <label for="keyword">Search by keyword:</label>
+            <input type="text" name="keyword" id="keyword">
+          </div>
         </div>
         <div class="form-group">
-          <label for="location">Find doctors near:</label>
+          <label>Find doctors within:</label>
+          <select name="radius" id="radius">
+            <option value="5">5 miles</option>
+            <option value="10">10 miles</option>
+            <option value="25">25 miles</option>
+            <option value="50">50 miles</option>
+            <option value="100">100 miles</option>
+          </select>
+          <label>of:</label>
           <select name="location" id="location">
-            <option value="">Portland, OR</option>
+            <option value="45.5231%2C-122.6765">Portland, OR</option>
+            <option value="30.4672688%2C-86.4980685">Tallahassee, FL</option>
+            <option value="47.2282089%2C-93.5701012">Grand Rapids, MN</option>
+            <option value="42.8606637%2C-72.6015389">Brattleboro, VT</option>
           </select>
         </div>
-        <button type="submit">Find doctors</button>
+        <button type="submit" class="btn">Find doctors</button>
       </form>
       <div id="result-doctors">
       </div>
