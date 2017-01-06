@@ -14,43 +14,46 @@
   <body>
     <div class="container">
       <h1>Find a Doctor</h1>
-      <form id="find-dr" action="index.html" method="post">
-        <div id="ailment-input" class="form-group">
-          <div>
-            <label for="ailment">What ails you?</label>
-            <input type="text" name="ailment" id="ailment" list="ailments">
-            <datalist id="ailments"></datalist>
+      <div id="form-display">
+        <form id="find-dr" action="index.html" method="post">
+          <div id="ailment-input" class="form-group">
+            <div>
+              <label for="ailment">What ails you?</label>
+              <input type="text" name="ailment" id="ailment" list="ailments">
+              <datalist id="ailments"></datalist>
+            </div>
+            <p class="clickable" id="switch-input">Or click here to search by keyword.</p>
           </div>
-          <p class="clickable" id="switch-input">Or click here to search by keyword.</p>
-        </div>
-        <div id="keyword-input" class="form-group">
-          <div>
-            <label for="keyword">Search by keyword:</label>
-            <input type="text" name="keyword" id="keyword">
+          <div id="keyword-input" class="form-group">
+            <div>
+              <label for="keyword">Search by keyword:</label>
+              <input type="text" name="keyword" id="keyword">
+            </div>
+            <p class="clickable" id="switch-input">Or click here to search by ailment.</p>
           </div>
-          <p class="clickable" id="switch-input">Or click here to search by ailment.</p>
-        </div>
-        <div class="form-group">
-          <label>Find doctors within:</label>
-          <select name="radius" id="radius">
-            <option value="5">5 miles</option>
-            <option value="10">10 miles</option>
-            <option value="25">25 miles</option>
-            <option value="50">50 miles</option>
-            <option value="100">100 miles</option>
-          </select>
-          <label>of:</label>
-          <select name="location" id="location">
-            <option value="45.5231%2C-122.6765">Portland, OR</option>
-            <option value="30.4672688%2C-86.4980685">Tallahassee, FL</option>
-            <option value="47.2282089%2C-93.5701012">Grand Rapids, MN</option>
-            <option value="42.8606637%2C-72.6015389">Brattleboro, VT</option>
-          </select>
-        </div>
-        <button type="submit" class="btn">Find doctors</button>
-      </form>
+          <div class="form-group">
+            <label>Find doctors within:</label>
+            <select name="radius" id="radius">
+              <option value="5">5 miles</option>
+              <option value="10">10 miles</option>
+              <option value="25">25 miles</option>
+              <option value="50">50 miles</option>
+              <option value="100">100 miles</option>
+            </select>
+            <label>of:</label>
+            <select name="location" id="location">
+              <option value="45.5231%2C-122.6765">Portland, OR</option>
+              <option value="30.4672688%2C-86.4980685">Tallahassee, FL</option>
+              <option value="47.2282089%2C-93.5701012">Grand Rapids, MN</option>
+              <option value="42.8606637%2C-72.6015389">Brattleboro, VT</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Find doctors</button>
+        </form>
+      </div>
       <div id="result-doctors">
       </div>
+      <p>All information retrieved from <a href="https://betterdoctor.com">BetterDoctor.com</a>.</p>
     </div>
   </body>
 </html>

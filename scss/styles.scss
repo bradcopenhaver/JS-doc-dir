@@ -1,13 +1,15 @@
 #result-doctors {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   .listing {
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 210px;
     border: solid black 1px;
-    h4 {
-      text-align: center;
-    }
+    border-radius: 20px;
+    margin: 10px;
+    background-color: beige;
+    text-align: center;
     img {
       display: block;
       margin: 0 auto;
@@ -17,8 +19,32 @@
 #keyword-input {
   display: none;
 }
+#form-display {
+  text-align: center;
+  border: solid black 1 px;
+  border-radius: 15px;
+  background-color: lightgray;
+  width: 50%;
+  padding: 30px;
+  display: block;
+  margin: 0 auto;
+  button {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  label {
+    font-size: 16px;
+  }
+}
+
 .clickable {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
+}
+
+h1, p{
+  text-align: center;
 }
