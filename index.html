@@ -15,17 +15,19 @@
     <div class="container">
       <h1>Find a Doctor</h1>
       <form id="find-dr" action="index.html" method="post">
-        <label for="ailment">What ails you, my friend?</label>
-        <input type="text" name="ailment" id="ailment">
-        <label for="location">Find doctors near:</label>
-        <select name="location" id="location">
-          <option value="">Portland, OR</option>
-        </select>
+        <div class="form-group">
+          <label for="ailment">What ails you, my friend?</label>
+          <input type="text" name="ailment" id="ailment">
+        </div>
+        <div class="form-group">
+          <label for="location">Find doctors near:</label>
+          <select name="location" id="location">
+            <option value="">Portland, OR</option>
+          </select>
+        </div>
         <button type="submit">Find doctors</button>
       </form>
-      <div>
-        <ul id="result-doctors">
-        </ul>
+      <div id="result-doctors">
       </div>
     </div>
   </body>
