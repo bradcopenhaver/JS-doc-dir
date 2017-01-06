@@ -15,6 +15,13 @@ $(function() {
   $('#find-dr').submit(function(event) {
     event.preventDefault();
     var newLookup = new LookupDr();
-    newLookup.search($('#keyword').val(), $('#radius').val(), $('#location').val(), displayResults);
+    newLookup.search($('#keyword').val() + $('#ailment').val(), $('#radius').val(), $('#location').val(), displayResults);
+  });
+
+  $('.clickable').click(function() {
+    $('#keyword-input').toggle();
+    $('#ailment-input').toggle();
+    $('#keyword').val("");
+    $('#ailment').val("");
   });
 });

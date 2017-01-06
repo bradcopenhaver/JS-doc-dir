@@ -15,18 +15,20 @@
     <div class="container">
       <h1>Find a Doctor</h1>
       <form id="find-dr" action="index.html" method="post">
-        <div class="form-group">
-          <div id="ailment-input">
+        <div id="ailment-input" class="form-group">
+          <div>
             <label for="ailment">What ails you?</label>
-            <input type="text" name="ailment" id="ailment">
+            <input type="text" name="ailment" id="ailment" list="ailments">
+            <datalist id="ailments"></datalist>
           </div>
+          <p class="clickable" id="switch-input">Or click here to search by keyword.</p>
         </div>
-        <p class="clickable" id="show-keyword">Or click here to search by keyword.</p>
-        <div class="form-group">
-          <div id="keyword-input">
+        <div id="keyword-input" class="form-group">
+          <div>
             <label for="keyword">Search by keyword:</label>
             <input type="text" name="keyword" id="keyword">
           </div>
+          <p class="clickable" id="switch-input">Or click here to search by ailment.</p>
         </div>
         <div class="form-group">
           <label>Find doctors within:</label>
