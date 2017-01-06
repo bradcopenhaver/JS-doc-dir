@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script src="build/js/app.js"></script>
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCknIV2OGXgh46Y7A475XsnkN4AWTzkSR0">
+    </script> -->
+    <title>Find a Doctor</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Find a Doctor</h1>
+      <form id="find-dr" action="index.html" method="post">
+        <label for="ailment">What ails you, my friend?</label>
+        <input type="text" name="ailment" id="ailment">
+        <label for="location">Find doctors near:</label>
+        <select name="location" id="location">
+          <option value="">Portland, OR</option>
+        </select>
+        <button type="submit">Find doctors</button>
+      </form>
+      <div>
+        <ul id="result-doctors">
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
